@@ -10,5 +10,6 @@ plotly == 5.6.0
 
 ## Current UI 
 Still being updated.
-![image](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/cb8e7095-0baa-448c-8ccb-235e50404484)
+![image](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/6a71eeb5-6839-478f-9576-486ec08f1708)
+
 
