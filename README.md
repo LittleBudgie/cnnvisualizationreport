@@ -12,13 +12,15 @@ pandas == 1.4.2,
 plotly == 5.6.0
 
 ## Current UI 
+Still being updated!
+
 First tab:
 ![Untitled design (1)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/537bb173-82a4-4e44-81ba-38cf8d31ee18)
 
 Second tab:
 ![Untitled design](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/891df783-2335-4ca7-97eb-e8930973465a)
 
-Data table still being updated.
+
 
 
 
