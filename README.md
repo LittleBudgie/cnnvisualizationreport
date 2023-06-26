@@ -13,9 +13,11 @@ plotly == 5.6.0
 
 ## Current UI 
 First tab:
-<img width="1440" alt="image" src="https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/fa76d11b-4417-416a-b868-ae32840ebb68">
+![Untitled design (1)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/537bb173-82a4-4e44-81ba-38cf8d31ee18)
+
 Second tab:
-<img width="1435" alt="image" src="https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/c90a666d-5810-4298-a0b0-0143a4a540ab">
+![Untitled design](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/891df783-2335-4ca7-97eb-e8930973465a)
+
 Data table still being updated.
 
 
