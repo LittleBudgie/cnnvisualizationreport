@@ -1,4 +1,4 @@
-# cnnvisualizationreport
+![Untitled design (2)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/a2547126-da72-4ddf-a4ce-d1303d1286e3)![Untitled design (2)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/4c0bca70-a4fa-497b-9734-56fe4fde5b1c)# cnnvisualizationreport
 Rainforest Connection CNN Data Visualization Dashboard
 
 ## Access Instructions
@@ -15,10 +15,12 @@ plotly == 5.6.0
 Still being updated!
 
 First tab:
-![Untitled design (1)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/537bb173-82a4-4e44-81ba-38cf8d31ee18)
+![Untitled design (2)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/16c5ee37-3f5b-4261-b92c-b0dd8148f004)
+
 
 Second tab:
-![Untitled design](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/891df783-2335-4ca7-97eb-e8930973465a)
+![Untitled design (3)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/de9cbd50-0400-4472-992d-dfc657d1ec5e)
+
 
 
 
