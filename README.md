@@ -1,4 +1,4 @@
-![Untitled design (2)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/a2547126-da72-4ddf-a4ce-d1303d1286e3)![Untitled design (2)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/4c0bca70-a4fa-497b-9734-56fe4fde5b1c)# cnnvisualizationreport
+# cnnvisualizationreport
 Rainforest Connection CNN Data Visualization Dashboard
 
 ## Access Instructions
