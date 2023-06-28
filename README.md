@@ -15,11 +15,13 @@ plotly == 5.6.0
 Still being updated!
 
 First tab:
-![Untitled design (2)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/16c5ee37-3f5b-4261-b92c-b0dd8148f004)
+![first tab](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/a054867d-cbf1-4fb6-9919-83e21a291c6e)
+
 
 
 Second tab:
-![Untitled design (3)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/de9cbd50-0400-4472-992d-dfc657d1ec5e)
+![second tab](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/ab1a4a9c-031a-4107-af95-413084c00037)
+
 
 
 
