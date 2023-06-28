@@ -11,6 +11,8 @@ dash_html_components == 2.0.0,
 pandas == 1.4.2,
 plotly == 5.6.0
 
+This is still a working requirements list and will be made into a final requirements.txt later. 
+
 ## Current UI 
 Still being updated! (As of evening, 06/28)
 
