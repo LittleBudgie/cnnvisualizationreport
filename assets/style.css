@@ -1,0 +1,34 @@
+body {
+    font-family: 'Helvetica';  
+}
+
+.p {
+    margin-left: 1%;
+}
+
+.titlecard {
+    border: 2px black solid;
+    background-color: #f9f9f9;
+}
+
+.sidebysidetitlecard {
+    border: 2px black solid;
+    background-color: #f9f9f9;
+    display: inline-block;
+    width: 49.7%;
+}
+
+.card {
+    border: 2px black solid;
+}
+
+.sidebysidegraph {
+    width: 49%;
+    display: inline-block;
+}
+
+.sidebysidecard {
+    border: 2px black solid;
+    display: inline-block;
+    width: 49.7%;
+}
