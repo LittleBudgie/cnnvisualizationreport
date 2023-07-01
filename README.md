@@ -14,7 +14,7 @@ plotly == 5.6.0
 This is still a working requirements list and will be made into a final requirements.txt later. 
 
 ## Current UI 
-Still being updated! (As of evening, 06/28)
+Still being updated! (As of evening, 06/30)
 
 First tab:
 ![first tab 0630](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/4555b323-7c15-46e2-9029-21afb532bf72)
