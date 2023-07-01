@@ -17,13 +17,13 @@ This is still a working requirements list and will be made into a final requirem
 Still being updated! (As of evening, 06/28)
 
 First tab:
-![first tab 0628](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/06836bc9-c022-4993-9aa3-783697ea2443)
-
+![first tab 0630](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/4555b323-7c15-46e2-9029-21afb532bf72)
 
 
 
 Second tab:
-![second tab 0628](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/1e31cfda-6dcd-4f8b-b3d4-27e5f36e7030)
+![second tab 0630](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/fa52efd0-bf33-449b-aa15-910d4030990a)
+
 
 
 
