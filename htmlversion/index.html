@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class = "nav">
+    <a class = "active"  href = "index.html"> Overall Model </a>
+    <a  class = "active" href = "specificspecies.html"> Specific Species </a>
+   </div>
+  <h2> Rainforest Connection CNN Visualization Dashboard </h2>
+  <div class = 'titlecard'>
+    <p class = 'titletext'> Training Data </p>
+  </div>
+  <div class = 'card'> 
+    <div>                            
+      <script src="https://cdn.plot.ly/plotly-latest.min.js">     
+      </script> 
+    <div>  
+      <div id="2c8c40c1-f1b6-4e2a-add2-d16912c7256d" class="plotly-        graph-div" style="height:100%; width:100%;"></div>                    <script type="text/javascript" src = "sortedbarchart.js">             </script>        
+    </div>
+  </div>
+  </div>
+  <br>
+  <div class = "sidebysidetitlecard">
+    <p class = "titletext"> Model Parameters </p>
+  </div>
+  <div class = "sidebysidetitlecard">
+    <p class = "titletext"> Average Metrics of Model Performance </p>
+  </div>
+  <div class = 'sidebysidecard'>
+  <table>
+    <tr>
+      <th> Parameter </th>
+      <th> Value </th>
+    </tr>
+    <tr>
+      <td> Model Architecture </td>
+      <td> MobileNetV2 </td>
+    </tr>
+    <tr>
+      <td> Audio Length of Output </td>
+      <td> 5 </td>
+    </tr>
+    <tr>
+      <td> Audio Sample Rate </td>
+      <td> 48000 </td>
+    </tr>
+    <tr>
+      <td> Sample Size </td>
+      <td> 275518 </td>
+    </tr>
+    <tr>
+      <td> Number of Species </td>
+      <td> 98 </td>
+    </tr>
+  </table>
+  </div>
+  <div class = 'sidebysidecard'>
+  <table>
+    <tr>
+      <th class = "performancetable"> Metric </th>
+      <th class = "performancetable"> Value </th>
+    </tr>
+    <tr>
+      <td class = "performancetable"> Mean Average Precision </td>
+      <td class = "performancetable"> 0.9372 </td>
+    </tr>
+    <tr>
+      <td class = "performancetable"> Mean Area Under ROC Curve </td>
+      <td class = "performancetable"> 0.9981 </td>
+    </tr>
+    <tr>
+      <td class = "performancetable"> Mean F1 Score </td>
+      <td class = "performancetable"> 0.8845 </td>
+    </tr>
+  </table>
+  </div>
+</body>
+
+</html>
