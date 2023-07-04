@@ -1,0 +1,58 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    font-family: 'Helvetica';  
+}
+
+.titletext {
+    margin-left: 1%;
+}
+
+.titlecard {
+    border: 2px black solid;
+    background-color: #f9f9f9;
+}
+
+.sidebysidetitlecard {
+    border: 2px black solid;
+    background-color: #f9f9f9;
+    display: inline-block;
+    width: 49.57%;
+}
+
+.card {
+    border: 2px black solid;
+}
+
+.sidebysidegraph {
+    width: 49.57%;
+    display: inline-block;
+}
+
+.sidebysidecard {
+    border: 2px black solid;
+    display: inline-block;
+    width: 49.57%;
+}
+
+th, td {
+  border: 1px solid;
+  width: 50%;
+}
+
+table {
+  border: 1px solid;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.performancetable {
+  border-spacing: 1000px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
