@@ -4,6 +4,8 @@ Rainforest Connection CNN Data Visualization Dashboard
 ## Access Instructions
 Accessed by running the Juypter Notebook and opening the Dash server that appears upon running. The requirements for the Jupyter Notebook are listed below. 
 
+For the HTML version, all code can be accessed in the "htmlversion" folder and run normally in an IDE. The data folder still must be downloaded, as this has all the data for the HTML files to work. Here is a link to the working code: https://htmlversion.littlebudgie.repl.co 
+
 ## Requirements
 dash == 2.0.0,
 dash_core_components == 2.0.0,
