@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Helvetica';  
+    font-family: Helvetica;  
 }
 
 .titletext {
@@ -20,7 +20,9 @@ body {
     border: 2px black solid;
     background-color: #f9f9f9;
     display: inline-block;
-    width: 49.57%;
+    width: 49.65%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .card {
@@ -28,14 +30,18 @@ body {
 }
 
 .sidebysidegraph {
-    width: 49.57%;
     display: inline-block;
+    width: 49.65%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .sidebysidecard {
     border: 2px black solid;
     display: inline-block;
-    width: 49.57%;
+    width: 49.65%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 th, td {
@@ -49,10 +55,79 @@ table {
   border-collapse: collapse;
 }
 
-.performancetable {
-  border-spacing: 1000px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 40px;
+.parametertable {
+  padding-left: 6px;
+  padding-top: 0.55px;
 }
+
+.performancetable {
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-bottom: 6px;
+  padding-right: 6px;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #f9f9f9;
+  font-family: Helvetica;
+}
+
+.navtext {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  border: 1px gray solid;
+  padding-left: 21.55%;
+  padding-right: 21.55%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
