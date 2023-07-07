@@ -16,15 +16,17 @@ plotly == 5.6.0
 This is still a working requirements list and will be made into a final requirements.txt later. 
 
 ## Current UI 
-Still being updated! (As of evening, 06/30)
+Still being updated! 
 
-First tab:
-![first tab 0630](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/4555b323-7c15-46e2-9029-21afb532bf72)
+First tab (As of 07/07, HTML version:
+![second tab 0630 (1)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/720a699a-9c59-4b16-a47a-984e7cf304e5)
 
 
 
-Second tab:
-![second tab 0630](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/fa52efd0-bf33-449b-aa15-910d4030990a)
+
+Second tab: (As of evening, 06/30 Jupyter version)
+![second tab 0630](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/b8fde66c-a768-44f4-bc34-755d60d53951)
+
 
 
 
