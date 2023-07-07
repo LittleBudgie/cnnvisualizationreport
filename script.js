@@ -1,17 +1,109 @@
+const specieslist = ['Formicarius analis',
+ 'Herpsilochmus dorsimaculatus',
+ 'Dendrocolaptes certhia',
+ 'Myrmoderus ferrugineus',
+ 'Crypturellus variegatus',
+ 'Ramphotrigon ruficauda',
+ 'Ramphastos tucanus',
+ 'Vireolanius leucotis',
+ 'Lipaugus vociferans',
+ 'Frederickena viridis',
+ 'Thamnophilus murinus',
+ 'Formicarius colma',
+ 'Piprites chloris',
+ 'Patagioenas plumbea',
+ 'Crypturellus soui',
+ 'Willisornis poecilinotus',
+ 'Ramphocaenus melanurus',
+ 'Trogon viridis',
+ 'Nyctidromus albicollis',
+ 'Attila spadiceus',
+ 'Myrmothera campanisona',
+ 'Hypocnemis cantator',
+ 'Percnostola rufifrons subcristata',
+ 'Pithys albifrons',
+ 'Leucopternis melanops',
+ 'Monasa atra',
+ 'Mionectes macconneli',
+ 'Psarocolius viridis',
+ 'Micrastur gilvicollis',
+ 'Cercomacra cinerascens',
+ 'Pitangus sulphuratus',
+ 'Ortalis motmot',
+ 'Tinamus major',
+ 'Turdus albicollis',
+ 'Brotogeris chrysoptera',
+ 'Pionus menstruus',
+ 'Pionus fuscus',
+ 'Amazona autumnalis',
+ 'Deroptyus accipitrinus',
+ 'Megascops watsonii',
+ 'Myrmelastes leucostigma',
+ 'Patagioenas speciosa',
+ 'Glaucidium hardyi',
+ 'Cyanoloxia rothschildii',
+ 'Nyctibius griseus',
+ 'Trogon rufus',
+ 'Trogon violaceus',
+ 'Momotus momota',
+ 'Selenidera piperivora',
+ 'Ramphastos vitellinus',
+ 'Piculus chrysochloros',
+ 'Celeus undatus',
+ 'Galbula albirostris',
+ 'Jacamerops aureus',
+ 'Bucco tamatia',
+ 'Tyranneutes virescens',
+ 'Lepidothrix serena',
+ 'Bucco capensis',
+ 'Laniocera hypopyrra',
+ 'Phoenicircus carnifex',
+ 'Myiopagis gaimardii',
+ 'Corythopis torquatus',
+ 'Lophotriccus vitiosus',
+ 'Tolmomyias assimilis',
+ 'Thamnophilus punctatus',
+ 'Gymnopithys rufigula',
+ 'Schiffornis olivacea',
+ 'Lanio fulvus',
+ 'Saltator grossus',
+ 'Tyrannulus elatus',
+ 'Hylopezus macularius',
+ 'Hylexetastes perroti',
+ 'Campylorhamphus procurvoides',
+ 'Thamnomanes ardesiacus',
+ 'Myrmotherula menetriesii',
+ 'Glyphorynchus spirurus',
+ 'Cymbilaimus lineatus',
+ 'Cyclarhis gujanensis',
+ 'Pachysylvia muscicapina',
+ 'Automolus ochrolaemus',
+ 'Automolus infuscatus',
+ 'Rhytipterna simplex',
+ 'Sirystes subcanescens',
+ 'Micrastur semitorquatus',
+ 'Myiarchus ferox',
+ 'Xiphorhynchus pardalotus',
+ 'Sittasomus griseicapillus',
+ 'Micrastur mirandollei',
+ 'Tunchiornis ochraceiceps',
+ 'Thamnomanes caesius',
+ 'Odontophorus gujanensis',
+ 'Deconychura longicauda',
+ 'Microbates collaris',
+ 'Dendrocolaptes picumnus',
+ 'Myrmotherula axillaris',
+ 'Dryocopus lineatus',
+ 'Conopias parvus',
+ 'Dendrexetastes rufigula']
+
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
+  var i;
+    for (i = 0; i < specieslist.length; i++) {
+      var node = document.createElement('li');
+      node.appendChild(document.createTextNode(specieslist[i]));
+      document.querySelector('ul').appendChild(node);
+    }
 }
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
