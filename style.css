@@ -20,7 +20,7 @@ body {
     border: 2px black solid;
     background-color: #f9f9f9;
     display: inline-block;
-    width: 49.65%;
+    width: 49%;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -31,7 +31,7 @@ body {
 
 .sidebysidegraph {
     display: inline-block;
-    width: 49.65%;
+    width: 49%;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -39,7 +39,7 @@ body {
 .sidebysidecard {
     border: 2px black solid;
     display: inline-block;
-    width: 49.65%;
+    width: 49%;
     padding-left: 0px;
     padding-right: 0px;
 }
