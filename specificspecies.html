@@ -16,12 +16,36 @@
     <a class = "navtext" href = "specificspecies.html"> Specific Species </a>
    </div>
   <br>
-  <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-    <div id="myDropdown" class="dropdown-content">
-      <ul> </ul>
+  <h4> Select a species: </h4>
+  <select onclick = "showDropdown()" onchange = "selectedDropdown()"class = "dropbtn" id = "MyDropdown"> 
+    <div class = "dropdown-content">
+      <option> </option>
+      <option> Amazona autumnalis </option>
     </div>
-  </div> 
+  </select>
+  <br> <br>
+  <div class='titlecard'> 
+    <p class = 'titletext'> Confusion Matrix for Select Species </p>
+  </div>
+  <div class = "card">
+    <table>
+      <tr>
+        <th class = "confusionmatrix"> Name </th>
+        <th class = "confusionmatrix"> Actual Number of Species Present </th>
+        <th class = "confusionmatrix"> Actual Number of Species Absent </th>
+      </tr>
+      <tr>
+        <th class = "confusionmatrix"> Predicted Number of Species Present </th>
+        <td class = "confusionmatrix" id = "tp">  </td>
+        <td class = "confusionmatrix" id = "fp"> </td>
+      </tr>
+      <tr>
+        <th class = "confusionmatrix"> Predicted Number of Species Absent </th>
+        <td class = "confusionmatrix" id = "fn">  </td>
+        <td class = "confusionmatrix" id = "tn"> </td>
+      </tr>
+    </table>
+  </div>
 </body>
 
 </html>
