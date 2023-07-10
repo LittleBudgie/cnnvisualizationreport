@@ -97,13 +97,21 @@ const specieslist = ['Formicarius analis',
  'Conopias parvus',
  'Dendrexetastes rufigula']
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+specieslist.sort()
+
+function showDropdown() {
   var i;
     for (i = 0; i < specieslist.length; i++) {
-      var node = document.createElement('li');
-      node.appendChild(document.createTextNode(specieslist[i]));
-      document.querySelector('ul').appendChild(node);
+      if (document.getElementsByClassName("dropdownspecies").length != 97) {
+        var node = document.createElement('option');
+        node.classList.add("dropdownspecies");
+        node.appendChild(document.createTextNode(specieslist[i]));
+        document.querySelector('select').appendChild(node);
+      }
     }
+}
+
+function selectedDropdown() {
+  
 }
 
