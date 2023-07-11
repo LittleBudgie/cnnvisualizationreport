@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width">
   <title> Rainforest Connection CNN Visualization Dashboard </title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -17,9 +20,8 @@
    </div>
   <br>
   <h4> Select a species: </h4>
-  <select onclick = "showDropdown()" onchange = "selectedDropdown()"class = "dropbtn" id = "MyDropdown"> 
+  <select onclick = "showDropdown()" class = "dropbtn" id = "MyDropdown"> 
     <div class = "dropdown-content">
-      <option> </option>
       <option> Amazona autumnalis </option>
     </div>
   </select>
@@ -27,24 +29,8 @@
   <div class='titlecard'> 
     <p class = 'titletext'> Confusion Matrix for Select Species </p>
   </div>
-  <div class = "card">
-    <table>
-      <tr>
-        <th class = "confusionmatrix"> Name </th>
-        <th class = "confusionmatrix"> Actual Number of Species Present </th>
-        <th class = "confusionmatrix"> Actual Number of Species Absent </th>
-      </tr>
-      <tr>
-        <th class = "confusionmatrix"> Predicted Number of Species Present </th>
-        <td class = "confusionmatrix" id = "tp">  </td>
-        <td class = "confusionmatrix" id = "fp"> </td>
-      </tr>
-      <tr>
-        <th class = "confusionmatrix"> Predicted Number of Species Absent </th>
-        <td class = "confusionmatrix" id = "fn">  </td>
-        <td class = "confusionmatrix" id = "tn"> </td>
-      </tr>
-    </table>
+  <div class = "card" id = "confusionmatrix">
+    <!-- This is where the confusion matrix is inserted with plotly -->
   </div>
 </body>
 
