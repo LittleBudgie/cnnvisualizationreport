@@ -97,11 +97,22 @@ const specieslist = ['Formicarius analis',
  'Conopias parvus',
  'Dendrexetastes rufigula']
 
-specieslist.sort()
+specieslist.sort();
+var speciesinput;
+
+window.onload = (event) => {
+  speciesinput = "Amazona autumnalis";
+  fetch("./trial_5_model_full_evaluation.json")
+        .then((res) => {
+        return res.json();
+    })
+    .then((data) => createMatrix(data))
+};
 
 function showDropdown() {
   var i;
-    for (i = 0; i < specieslist.length; i++) {
+    for (i = 1; i < specieslist.length; i++) {
+      //start at i = 1 because we already have the first species in the list (see       specificspecies.html)
       if (document.getElementsByClassName("dropdownspecies").length != 97) {
         var node = document.createElement('option');
         node.classList.add("dropdownspecies");
@@ -109,9 +120,46 @@ function showDropdown() {
         document.querySelector('select').appendChild(node);
       }
     }
+  var dropdown = document.getElementById("MyDropdown");
+  dropdown.addEventListener('change', function (e) {
+  speciesinput = dropdown.options[dropdown.selectedIndex].value;
+    fetch("./trial_5_model_full_evaluation.json")
+        .then((res) => {
+        return res.json();
+    })
+    .then((data) => createMatrix(data))
+  }); 
 }
 
-function selectedDropdown() {
+function createMatrix(speciesdata) {
+  const speciesinputarr = speciesinput.split(" ");
+  const speciesnamearr = [""];
+  for (i = 0; i < speciesinputarr.length; i++) {
+    speciesnamearr.push(speciesinputarr[i], "_");
+  }
+  
+  if (speciesnamearr.join("").includes("Pionus_menstruus")) {
+    speciesnamearr.push("simple_call");
+  } else if (speciesnamearr.join("").includes("Turdus_albicollis")) {
+    speciesnamearr.push("simple_call");
+  } else {
+    speciesnamearr.push("common_song");
+  }
+  speciesname = speciesnamearr.join("");
+  const speciesrow = speciesdata[speciesname];
+  var data = [{
+        z: [[speciesrow.true_presence, speciesrow.true_absence], 
+            [speciesrow.predicted_presence, speciesrow.predicted_absence]],
+        type: 'heatmap',
+        x: [speciesinput, 'Not ' + speciesinput],
+        y: ['Not ' + speciesinput, speciesinput],
+      }];
+  var layout = {
+    title: 'Confusion Matrix for ' + speciesinput,
+    yaxis: {
+      automargin: true
+    }
+  };
+  Plotly.newPlot('confusionmatrix', data, layout);
   
 }
-
