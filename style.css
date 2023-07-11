@@ -14,6 +14,7 @@ body {
 .titlecard {
     border: 2px black solid;
     background-color: #f9f9f9;
+    width: 100%;
 }
 
 .sidebysidetitlecard {
@@ -27,6 +28,7 @@ body {
 
 .card {
     border: 2px black solid;
+    width: 100%;
 }
 
 .sidebysidegraph {
@@ -42,10 +44,6 @@ body {
     width: 49.5%;
     padding-left: 0px;
     padding-right: 0px;
-}
-
-th, td {
-  
 }
 
 table {
