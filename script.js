@@ -142,23 +142,95 @@ function createMatrix(speciesdata) {
     speciesnamearr.push("simple_call");
   } else if (speciesnamearr.join("").includes("Turdus_albicollis")) {
     speciesnamearr.push("simple_call");
+  } else if (speciesnamearr.join("").includes("Dryocopus_lineatus")) {
+    speciesnamearr.push("[lineatus_Group]_common_song");
   } else {
     speciesnamearr.push("common_song");
   }
   speciesname = speciesnamearr.join("");
   const speciesrow = speciesdata[speciesname];
+
+  var a, b, c, d;
+  b = parseFloat(speciesrow.false_positive_rate) * speciesrow.true_absence;
+  d = speciesrow.true_absence - b;
+  a = speciesrow.predicted_presence - b;
+  c = speciesrow.predicted_absence - d;
+  
   var data = [{
-        z: [[speciesrow.true_presence, speciesrow.true_absence], 
-            [speciesrow.predicted_presence, speciesrow.predicted_absence]],
-        type: 'heatmap',
+        z: [[c, d], 
+            [a, parseInt(b)]],
+        type: 'heatmap', 
+        colorscale: [
+          ['0.0', 'rgb(165,0,38)'],
+          ['0.111111111111', 'rgb(215,48,39)'],
+          ['0.222222222222', 'rgb(244,109,67)'],
+          ['0.333333333333', 'rgb(253,174,97)'],
+          ['0.444444444444', 'rgb(254,224,144)'],
+          ['0.555555555556', 'rgb(224,243,248)'],
+          ['0.666666666667', 'rgb(171,217,233)'],
+          ['0.777777777778', 'rgb(116,173,209)'],
+          ['0.888888888889', 'rgb(69,117,180)'],
+          ['1.0', 'rgb(49,54,149)']
+        ],
         x: [speciesinput, 'Not ' + speciesinput],
         y: ['Not ' + speciesinput, speciesinput],
       }];
   var layout = {
     title: 'Confusion Matrix for ' + speciesinput,
+    annotations: [
+      {
+        font: {
+          size: 20,
+          color: "white",
+        },
+        showarrow: false,
+        text: c,
+        x: speciesinput,
+        y: 'Not ' + speciesinput,
+      }, 
+      {
+        font: {
+          size: 20,
+          color: "white",
+        },
+        showarrow: false,
+        text: d,
+        x: 'Not ' + speciesinput,
+        y: 'Not ' + speciesinput,
+      },
+      {
+        font: {
+          size: 20,
+          color: "white",
+        },
+        showarrow: false,
+        text: parseInt(b),
+        x: 'Not ' + speciesinput,
+        y: speciesinput,
+      },
+      {
+        font: {
+          size: 20,
+          color: "white",
+        },
+        showarrow: false,
+        text: a,
+        x: speciesinput,
+        y: speciesinput,
+      }
+    ],
     yaxis: {
-      automargin: true
-    }
+      automargin: true,
+      title: {
+        text: "Prediction"
+      }
+    },
+    xaxis: {
+      automargin: true,
+      title: {
+        text: "Actual"
+      }
+    },
   };
   Plotly.newPlot('confusionmatrix', data, layout);
   
