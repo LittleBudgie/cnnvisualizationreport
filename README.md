@@ -24,8 +24,9 @@ First tab (As of 07/07, HTML version:
 
 
 
-Second tab: (As of evening, 06/30 Jupyter version)
-![second tab 0630](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/b8fde66c-a768-44f4-bc34-755d60d53951)
+Second tab: (As of evening, 07/12 HTML version)
+![second tab 0630 (2)](https://github.com/LittleBudgie/cnnvisualizationreport/assets/69771816/82dd3ea9-74f1-4a84-8d8d-33fe56b34fde)
+
 
 
 
