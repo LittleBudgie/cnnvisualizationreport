@@ -1,131 +1,113 @@
-html {
-  height: 100%;
-  width: 100%;
+window.onload = (event) => {
+  metricinput = "average precision";
+  fetch("./trial_5_model_full_evaluation.json")
+        .then((res) => {
+        return res.json();
+    })
+    .then((data) => makeGraph(data))
+};
+ 
+function showGraph() {
+  var dropdown = document.getElementById("metricdropdown");
+  dropdown.addEventListener('change', function (e) {
+  metricinput = dropdown.options[dropdown.selectedIndex].value;
+    fetch("./trial_5_model_full_evaluation.json")
+        .then((res) => {
+        return res.json();
+    })
+    .then((data) => makeGraph(data))
+  });
+}
+function makeGraph(jsonfile) {
+  const xdata = [""];
+  const ydata = [""];
+  var index;
+  for (species in jsonfile) {
+    //generating x data 
+    if (species.indexOf("common") != -1) {
+       index = species.indexOf("common");
+    } else {
+       index = species.indexOf("simple");
+    }
+    var speciesname = species.slice(0, index-1);
+    speciesname = speciesname.replace(/_/g,' ');
+    xdata.push(speciesname);
+    //generating y axis data
+    if (metricinput === "average precision") {
+      ydata.push(jsonfile[species]["ap"]);
+    }
+    if (metricinput === "area under ROC curve") {
+      ydata.push(jsonfile[species]["roc_auc"]);
+    }
+    if (metricinput === "f1 score") {
+      ydata.push(jsonfile[species]["f1"]);
+    }
+    if (metricinput === "false positive rate") {
+      ydata.push(jsonfile[species]["false_positive_rate"]);
+    }
+  }
+  //creating plot
+  var data = 
+    [{x: xdata, y: ydata, type: 'scatter',
+      mode: 'markers', 
+    }];
+  var layout = {
+    title: metricinput + ' across species',
+    yaxis: {
+      automargin: true,
+      title: {
+        text: metricinput + " values"
+      }
+    },
+    xaxis: {
+      automargin: true,
+    },
+    margin: {
+      
+    }
+  }
+  Plotly.newPlot('allspeciesmetricgraph', data, layout);
+  makeCurve(jsonfile);
 }
 
-body {
-    font-family: Helvetica;  
+function makeCurve(jsonfile) {
+  const precision = [""];
+  const recall = [""];
+  const specieslist = [""];
+  for (species in jsonfile) {
+    //generating specieslist
+    if (species.indexOf("common") != -1) {
+       index = species.indexOf("common");
+    } else {
+       index = species.indexOf("simple");
+    }
+    var speciesname = species.slice(0, index-1);
+    speciesname = speciesname.replace(/_/g,' ');
+    specieslist.push(speciesname);
+    //generating y axis data
+    precision.push(jsonfile[species]["precision"]);
+    recall.push(jsonfile[species]["recall"]);
+    }
+  //creating plot
+  var data = 
+    [{x: recall, y: precision, type: 'scatter',
+      text: specieslist,
+      mode: 'markers', 
+    }];
+  var layout = {
+    title: 'precision-recall curve across species',
+    yaxis: {
+      automargin: true,
+      title: {
+        text: "Precision"
+      }
+    },
+    xaxis: {
+      automargin: true,
+      title: {
+        text: "Recall"
+      }
+    },
+  }
+  Plotly.newPlot('precisionrecallcurve', data, layout);
 }
-
-.titletext {
-    margin-left: 1%;
-}
-
-.container {
-  display: flex;
-}
-
-label {
-  margin-left: 1%;
-}
-
-.titlecard {
-    border: 2px black solid;
-    background-color: #f9f9f9;
-    width: 100%;
-}
-
-.sidebysidetitlecard {
-    border: 2px black solid;
-    background-color: #f9f9f9;
-    display: inline-block;
-    width: 49.5%;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.card {
-    border: 2px black solid;
-    width: 100%;
-}
-
-.sidebysidegraph {
-    display: inline-block;
-    width: 49%;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.sidebysidecurve {
-    border: 2px black solid;
-    width: 49.5%;
-    padding-left: 0px;
-    padding-right: 1px;
-}
-
-.sidebysidecard {
-    border: 2px black solid;
-    display: inline-block;
-    width: 49.5%;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-table {
-  border: 1px solid;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.parametertable {
-  padding-left: 6px;
-  padding-top: 0.55px;
-  border: 1px solid;
-  width: 50%;
-}
-
-.performancetable {
-  padding-top: 6px;
-  padding-left: 6px;
-  padding-bottom: 6px;
-  padding-right: 6px;
-  border: 1px solid;
-  width: 50%;
-}
-
-.confusionmatrix {
-   border: 1px solid;
-}
-
-.nav {
-  overflow: hidden;
-  background-color: #f9f9f9;
-  font-family: Helvetica;
-}
-
-.navtext {
-  float: left;
-  font-size: 16px;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  border: 1px gray solid;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.webmaintext {
-  color: green;
-}
-
-.dropbtn {
-  font-size: 16px;
-  border: 2px black solid;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  font-size: 16px;
-  background-color: #f9f9f9;
-}
-
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
