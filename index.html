@@ -86,6 +86,36 @@
     </table>
   </div>
   <br> <br>
+  
+  <div class="sidebysidetitlecard">
+      <p class="titletext"> Evaluation Metrics Across Species </p> </div>
+    <div class="sidebysidetitlecard">
+      <p class="titletext"> Precision-Recall Curve Across Species </p> </div>
+  
+ <div class = "container"> 
+    <div class = "sidebysidecurve">
+      <br>
+      <label for="metricdropdown"> Select a metric to graph: </label>
+      <select onclick = "showGraph()" id = "metricdropdown" class = "dropbtn" class = "dropdown-  content"> 
+        <option> average precision </option>
+        <option> area under ROC curve </option>
+        <option> f1 score </option>
+        <option> false positive rate </option>
+    </select>
+      <br> <br>
+      <div id = "allspeciesmetricgraph">
+      <!-- This is where the species metric graph is inserted with plotly -->
+      </div>
+    </div>
+  <div class = "sidebysidecurve">
+    <div id = "precisionrecallcurve">
+    <!-- This is where the species metric graph is inserted with plotly -->
+    </div>
+  </div>
+</div>
+
+  <br> <br> 
+  
   <div class="titlecard">
     <p class="titletext"> Loss and Masked Binary Cross Entropy in Validation and Training Sets Over Training Epochs </p> </div>
     <div class="card">
@@ -101,23 +131,7 @@
           <script type="text/javascript" src="crossentropygraph.js"> </script>
         </div>
       </div>
-    </div> <br> 
-  <div class="titlecard">
-    <p class="titletext"> Evaluation Metrics Across Species </p> </div>
-  <div class = "card">
-    <select onclick = "showGraph()" id = "metricdropdown" class = "dropbtn"> 
-    <div class = "dropdown-content">
-      <option> average precision </option>
-      <option> area under ROC curve </option>
-      <option> f1 score </option>
-      <option> false positive rate </option>
-      <option> precision & recall </option>
-    </div>
-  </select>
-    <div id = "allspeciesmetricgraph">
-    <!-- This is where the species metric graph is inserted with plotly -->
-    </div>
-  </div>
+    </div> 
 </body>
 
 </html>
