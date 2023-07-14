@@ -11,6 +11,14 @@ body {
     margin-left: 1%;
 }
 
+.container {
+  display: flex;
+}
+
+label {
+  margin-left: 1%;
+}
+
 .titlecard {
     border: 2px black solid;
     background-color: #f9f9f9;
@@ -36,6 +44,13 @@ body {
     width: 49%;
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.sidebysidecurve {
+    border: 2px black solid;
+    width: 49.5%;
+    padding-left: 0px;
+    padding-right: 1px;
 }
 
 .sidebysidecard {
