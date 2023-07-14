@@ -120,7 +120,7 @@ function showDropdown() {
         document.querySelector('select').appendChild(node);
       }
     }
-  var dropdown = document.getElementById("MyDropdown");
+  var dropdown = document.getElementById("SpeciesDropdown");
   dropdown.addEventListener('change', function (e) {
   speciesinput = dropdown.options[dropdown.selectedIndex].value;
     fetch("./trial_5_model_full_evaluation.json")
