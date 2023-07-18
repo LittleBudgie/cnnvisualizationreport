@@ -12,10 +12,6 @@
 <body>
   <script src = "index.js"> </script>
   <h1 class="webmaintext"> Rainforest Connection CNN Report </h1>
-  <div class="nav">
-    <a class="navtext" href="index.html"> Overall Model </a>
-    <a class="navtext" href="specificspecies.html"> Specific Species </a>
-  </div>
   <div class='titlecard'>
     <p class='titletext'> Training Data </p>
   </div>
@@ -31,94 +27,120 @@
     </div>
   </div>
   <br>
-  <div class="sidebysidetitlecard">
-    <p class="titletext"> Model Parameters </p>
-  </div>
-  <div class="sidebysidetitlecard">
-    <p class="titletext"> Average Metrics of Model Performance </p>
-  </div>
-  <div class='sidebysidecard'>
-    <table>
-      <tr>
-        <th class="parametertable"> Parameter </th>
-        <th class="parametertable"> Value </th>
-      </tr>
-      <tr>
-        <td class="parametertable"> Model Architecture </td>
-        <td class="parametertable"> MobileNetV2 </td>
-      </tr>
-      <tr>
-        <td class="parametertable"> Audio Length of Output </td>
-        <td class="parametertable"> 5 </td>
-      </tr>
-      <tr>
-        <td class="parametertable"> Audio Sample Rate </td>
-        <td class="parametertable"> 48000 </td>
-      </tr>
-      <tr>
-        <td class="parametertable"> Sample Size </td>
-        <td class="parametertable"> 275518 </td>
-      </tr>
-      <tr>
-        <td class="parametertable"> Number of Species </td>
-        <td class="parametertable"> 98 </td>
-      </tr>
-    </table>
-  </div>
-  <div class='sidebysidecard'>
-    <table>
-      <tr>
-        <th class="performancetable"> Metric </th>
-        <th class="performancetable"> Value </th>
-      </tr>
-      <tr>
-        <td class="performancetable"> Mean Average Precision </td>
-        <td class="performancetable"> 0.9372 </td>
-      </tr>
-      <tr>
-        <td class="performancetable"> Mean Area Under ROC Curve </td>
-        <td class="performancetable"> 0.9981 </td>
-      </tr>
-      <tr>
-        <td class="performancetable"> Mean F1 Score </td>
-        <td class="performancetable"> 0.8845 </td>
-      </tr>
-    </table>
-  </div>
-  <br> <br>
-  
-  <div class="sidebysidetitlecard">
-      <p class="titletext"> Evaluation Metrics Across Species </p> </div>
+
+  <div class = "container">
     <div class="sidebysidetitlecard">
-      <p class="titletext"> Precision-Recall Curve Across Species </p> </div>
+      <p class="titletext"> Model Parameters </p>
+    </div>
+    <div class="sidebysidetitlecard">
+      <p class="titletext"> Average Metrics of Model Performance </p>
+    </div>
+  </div>
+
+  <div class = "container">
+    <div class='sidebysidecard'>
+      <table>
+        <tr>
+          <th class="parametertable"> Parameter </th>
+          <th class="parametertable"> Value </th>
+        </tr>
+        <tr>
+          <td class="parametertable"> Model Architecture </td>
+          <td class="parametertable"> MobileNetV2 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Audio Length of Output </td>
+          <td class="parametertable"> 5 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Audio Sample Rate </td>
+          <td class="parametertable"> 48000 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Sample Size </td>
+          <td class="parametertable"> 275518 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Number of Species </td>
+          <td class="parametertable"> 98 </td>
+        </tr>
+      </table>
+    </div>
+    <div class='sidebysidecard'>
+      <table>
+        <tr>
+          <th class="performancetable"> Metric </th>
+          <th class="performancetable"> Value </th>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean Average Precision </td>
+          <td class="performancetable"> 0.9372 </td>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean Area Under ROC Curve </td>
+          <td class="performancetable"> 0.9981 </td>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean F1 Score </td>
+          <td class="performancetable"> 0.8845 </td>
+        </tr>
+      </table>
+    </div>
+  </div>
   
- <div class = "container"> 
-    <div class = "sidebysidecurve">
-      <br>
-      <label for="metricdropdown"> Select a metric to graph: </label>
-      <select onclick = "showGraph()" id = "metricdropdown" class = "dropbtn" class = "dropdown-  content"> 
+  <br> 
+  <div class="titlecard">
+        <p class="titletext"> Evaluation Metrics Across Species </p> </div>
+  <div class = "card">
+    <br> 
+    <label for="metricdropdown"> Select a metric to graph: </label>
+      <select onclick = "showGraph()" id = "metricdropdown" class = "dropbtn" 
+        class = "dropdown-content"> 
         <option> average precision </option>
         <option> area under ROC curve </option>
         <option> f1 score </option>
         <option> false positive rate </option>
-    </select>
+     </select>
       <br> <br>
       <div id = "allspeciesmetricgraph">
       <!-- This is where the species metric graph is inserted with plotly -->
       </div>
+  </div>
+
+  <br> <br>
+  <div class = "container"> 
+    <div class="sidebysidetitlecard">
+        <p class="titletext"> Confusion Matrix for Specific Species </p> </div>
+    <div class="sidebysidetitlecard">
+      <p class="titletext"> Precision-Recall Curve Across Species </p> </div>
+  </div>
+  
+  <div class = "container"> 
+    <div class = "sidebysidecurve">
+      <br>
+      <label> Select a species: </label>
+      <select onclick = "showDropdown()" class = "dropbtn" id = "SpeciesDropdown"> 
+      <div class = "dropdown-content">
+        <option> Amazona autumnalis </option>
+      </div>
+      </select>
+      <br> <br>
+      <div id = "confusionmatrix">
+        <!-- This is where the confusion matrix is inserted with plotly -->
+      </div>
     </div>
-  <div class = "sidebysidecurve">
-    <div id = "precisionrecallcurve">
-    <!-- This is where the species metric graph is inserted with plotly -->
+    <div class = "sidebysidecurve">
+      <div id = "precisionrecallcurve">
+      <!-- This is where the species metric graph is inserted with plotly -->
+      </div>
     </div>
   </div>
-</div>
 
   <br> <br> 
   
   <div class="titlecard">
     <p class="titletext"> Loss and Masked Binary Cross Entropy in Validation and Training Sets Over Training Epochs </p> </div>
-    <div class="card">
+    <div class="card" class = "container">
       <div class="sidebysidegraph">
         <div id="95fcd427-87e3-4abc-a522-2897d0c0e71f" class="plotly-graph-div" style="height:100%; 
         width:100%;">

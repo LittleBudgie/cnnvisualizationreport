@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: Helvetica;  
+    font-family: Helvetica;  
 }
 
 .titletext {
@@ -29,7 +29,7 @@ label {
     border: 2px black solid;
     background-color: #f9f9f9;
     display: inline-block;
-    width: 50%;
+    width: 49.5%;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -41,14 +41,14 @@ label {
 
 .sidebysidegraph {
     display: inline-block;
-    width: 49.5%;
+    width: 49%;
     padding-left: 0px;
     padding-right: 0px;
 }
 
 .sidebysidecurve {
     border: 2px black solid;
-    width: 50%;
+    width: 49.5%;
     padding-left: 0px;
     padding-right: 1px;
 }
@@ -56,7 +56,7 @@ label {
 .sidebysidecard {
     border: 2px black solid;
     display: inline-block;
-    width: 50%;
+    width: 49.5%;
     padding-left: 0px;
     padding-right: 0px;
 }

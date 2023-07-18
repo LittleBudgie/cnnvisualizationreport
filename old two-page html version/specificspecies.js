@@ -152,14 +152,13 @@ function createMatrix(speciesdata) {
 
   var a, b, c, d;
   b = parseFloat(speciesrow.false_positive_rate) * speciesrow.true_absence;
-  b = Math.round(b);
   d = speciesrow.true_absence - b;
   a = speciesrow.predicted_presence - b;
   c = speciesrow.predicted_absence - d;
   
   var data = [{
         z: [[c, d], 
-            [a, b]],
+            [a, parseInt(b)]],
         type: 'heatmap', 
         colorscale: [
           ['0.0', 'rgb(165,0,38)'],
@@ -205,7 +204,7 @@ function createMatrix(speciesdata) {
           color: "white",
         },
         showarrow: false,
-        text: b,
+        text: parseInt(b),
         x: 'Not ' + speciesinput,
         y: speciesinput,
       },
@@ -234,4 +233,5 @@ function createMatrix(speciesdata) {
     },
   };
   Plotly.newPlot('confusionmatrix', data, layout);
+  
 }
