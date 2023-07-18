@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title> Rainforest Connection CNN Visualization Dashboard </title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
   <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
 </head>
 
@@ -94,7 +95,7 @@
   <div class = "card">
     <br> 
     <label for="metricdropdown"> Select a metric to graph: </label>
-      <select onclick = "showGraph()" id = "metricdropdown" class = "dropbtn" 
+      <select onclick = "showAllSpeciesMetricGraph()" id = "metricdropdown" class = "dropbtn" 
         class = "dropdown-content"> 
         <option> average precision </option>
         <option> area under ROC curve </option>
@@ -119,7 +120,7 @@
     <div class = "sidebysidecurve">
       <br>
       <label> Select a species: </label>
-      <select onclick = "showDropdown()" class = "dropbtn" id = "SpeciesDropdown"> 
+      <select onclick = "showSpeciesDropdown()" class = "dropbtn" id = "SpeciesDropdown"> 
       <div class = "dropdown-content">
         <option> Amazona autumnalis </option>
       </div>
