@@ -7,10 +7,10 @@ window.onload = (event) => {
         .then((res) => {
         return res.json();
     })
-    .then((data) => makeGraph(data))
+    .then((data) => makeAllSpeciesMetricGraph(data))
 };
 
-function showDropdown() {
+function showSpeciesDropdown() {
   var dropdown = document.getElementById("SpeciesDropdown");
   dropdown.addEventListener('change', function (e) {
   speciesinput = dropdown.options[dropdown.selectedIndex].value;
@@ -21,8 +21,8 @@ function showDropdown() {
     .then((data) => createMatrix(data))
   }); 
 }
- 
-function showGraph() {
+ //allspeciesmetricgraph
+function showAllSpeciesMetricGraph() {
   var dropdown = document.getElementById("metricdropdown");
   dropdown.addEventListener('change', function (e) {
   metricinput = dropdown.options[dropdown.selectedIndex].value;
@@ -30,10 +30,10 @@ function showGraph() {
         .then((res) => {
         return res.json();
     })
-    .then((data) => makeGraph(data))
+    .then((data) => makeAllSpeciesMetricGraph(data))
   });
 }
-function makeGraph(jsonfile) {
+function makeAllSpeciesMetricGraph(jsonfile) {
   const xdata = [""];
   const ydata = [""];
   var index;
@@ -125,14 +125,15 @@ function makeCurve(jsonfile) {
     },
   }
   Plotly.newPlot('precisionrecallcurve', data, layout);
-  makeDropdown(jsonfile, specieslist);
+  makeSpeciesDropdown(jsonfile, specieslist);
 }
 
-function makeDropdown(jsonfile, specieslist) {
+function makeSpeciesDropdown(jsonfile, specieslist) {
   specieslist.sort();
   var i;
-    for (i = 1; i < specieslist.length; i++) {
-      //start at i = 1 because we already have the first species in the dropdown 
+    for (i = 2; i < specieslist.length; i++) {
+      //start at i = 2 because we already have the first species in the dropdown 
+      // also becuase first item in list is blank
       if (document.getElementsByClassName("dropdownspecies").length != 97) {
         var node = document.createElement('option');
         node.classList.add("dropdownspecies");
