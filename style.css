@@ -69,15 +69,14 @@ table {
 
 .parametertable {
   padding-left: 6px;
-  padding-top: 0.55px;
   border: 1px solid;
   width: 50%;
 }
 
 .performancetable {
-  padding-top: 6px;
   padding-left: 6px;
-  padding-bottom: 6px;
+  padding-top: 15px;
+  padding-bottom: 14px;
   padding-right: 6px;
   border: 1px solid;
   width: 50%;
@@ -85,25 +84,6 @@ table {
 
 .confusionmatrix {
    border: 1px solid;
-}
-
-.nav {
-  overflow: hidden;
-  background-color: #f9f9f9;
-  font-family: Helvetica;
-}
-
-.navtext {
-  float: left;
-  font-size: 16px;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  border: 1px gray solid;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .webmaintext {
