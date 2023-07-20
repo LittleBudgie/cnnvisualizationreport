@@ -111,6 +111,7 @@ function makeCurve(jsonfile) {
     }];
   var layout = {
     title: 'precision-recall curve across species',
+    hovermode: "closest",
     yaxis: {
       automargin: true,
       title: {
