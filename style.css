@@ -60,26 +60,26 @@ label {
     padding-left: 0px;
     padding-right: 0px;
 }
+/*start of new CSS */
 
 table {
-  border: 1px solid;
-  width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
+  height: 100%;
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px black solid;
+  padding: 0.4em;
 }
 
 .parametertable {
-  padding-left: 6px;
-  border: 1px solid;
-  width: 50%;
+  border: 1px black solid;
 }
 
 .performancetable {
-  padding-left: 6px;
-  padding-top: 15px;
-  padding-bottom: 14px;
-  padding-right: 6px;
-  border: 1px solid;
-  width: 50%;
+  border: 1px black solid;
 }
 
 .confusionmatrix {
