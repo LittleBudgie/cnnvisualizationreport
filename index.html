@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title> Rainforest Connection CNN Visualization Dashboard </title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="data/favicon.png">
   <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
 </head>
 
@@ -18,12 +18,9 @@
   </div>
   <div class='card'>
     <div>
-      <script src="https://cdn.plot.ly/plotly-latest.min.js">
-      </script>
       <div>
-        <div id="2c8c40c1-f1b6-4e2a-add2-d16912c7256d" class="plotly-graph-div"
+        <div id="trainingdatachart"
           style="height:100%; width:100%;"></div>
-        <script type="text/javascript" src="sortedbarchart.js">             </script>
       </div>
     </div>
   </div>
@@ -33,15 +30,13 @@
     <p class="titletext"> Loss and Masked Binary Cross Entropy in Validation and Training Sets Over Training Epochs </p> </div>
     <div class="card" class = "container">
       <div class="sidebysidegraph">
-        <div id="95fcd427-87e3-4abc-a522-2897d0c0e71f" class="plotly-graph-div" style="height:100%; 
+        <div id="lossgraph" style="height:100%; 
         width:100%;">
-          <script type="text/javascript" src="lossgraph.js"> </script>
         </div>
       </div>
       <div class="sidebysidegraph">
-        <div id="95682a48-af24-4f01-866a-c0b104144ba2" class="plotly-graph-div" style="height:100%; 
+        <div id="crossentropygraph" class="plotly-graph-div" style="height:100%; 
         width:100%;">
-          <script type="text/javascript" src="crossentropygraph.js"> </script>
         </div>
       </div>
     </div> 
