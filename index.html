@@ -11,8 +11,211 @@
 </head>
 
 <body>
-  <!-- replace src with just index.js, this src url was just for testing-->
-  <script type="text/javascript" src = "/Users/suhanashrivastava/Downloads/rainforest connection/cnnvisualizationreport/index.js"> </script>
+  <script src = "index.js"> </script>
+  <h1 class="webmaintext"> Rainforest Connection CNN Report </h1>
+  <div class='titlecard'>
+    <p class='titletext'> Training Data </p>
+  </div>
+  <div class='card'>
+    <div>
+      <div>
+        <div id="trainingdatachart"
+          style="height:100%; width:100%;"></div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="titlecard">
+    <p class="titletext"> Loss and Masked Binary Cross Entropy in Validation and Training Sets Over Training Epochs </p> </div>
+    <div class="card" class = "container">
+      <div class="sidebysidegraph">
+        <div id="lossgraph" style="height:100%; 
+        width:100%;">
+        </div>
+      </div>
+      <div class="sidebysidegraph">
+        <div id="crossentropygraph" class="plotly-graph-div" style="height:100%; 
+        width:100%;">
+        </div>
+      </div>
+    </div> 
+
+  <br> <br>
+
+  <div class = "container">
+    <div class="sidebysidetitlecard">
+      <p class="titletext"> Model Parameters </p>
+    </div>
+    <div class="sidebysidetitlecard">
+      <p class="titletext"> Average Metrics of Model Performance </p>
+    </div>
+  </div>
+
+  <div class = "container">
+    <div class='sidebysidecard'>
+      <table>
+        <tr>
+          <th class="parametertable"> Parameter </th>
+          <th class="parametertable"> Value </th>
+        </tr>
+        <tr>
+          <td class="parametertable"> Model Architecture </td>
+          <td class="parametertable"> MobileNetV2 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Sample Size </td>
+          <td class="parametertable"> 275518 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Number of Species </td>
+          <td class="parametertable"> 98 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Upsampling </td>
+          <td class="parametertable"> True </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Class Layer Training Epochs </td>
+          <td class="parametertable"> 15 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Fine Tuning Training Epochs </td>
+          <td class="parametertable"> 25 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Audio Sample Rate </td>
+          <td class="parametertable"> 48000 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> Audio Sample Seconds Download </td>
+          <td class="parametertable"> 5 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> spec_min_hz </td>
+          <td class="parametertable"> 50 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> spec_max_hz </td>
+          <td class="parametertable"> 8000 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> spec_min_db </td>
+          <td class="parametertable"> -100 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> spec_max_db </td>
+          <td class="parametertable"> 20 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> datagen_random_time_crop </td>
+          <td class="parametertable"> True </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> datagen_sample_seconds_input </td>
+          <td class="parametertable"> 3 </td>
+        </tr>
+        <tr>
+          <td class="parametertable"> datagen_augment </td>
+          <td class="parametertable"> False </td>
+        </tr>
+      </table>
+    </div>
+    <div class='sidebysidecard'>
+      <table>
+        <tr>
+          <th class="performancetable"> Metric </th>
+          <th class="performancetable"> Value </th>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean Average Precision </td>
+          <td class="performancetable"> 0.9372 </td>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean Area Under ROC Curve </td>
+          <td class="performancetable"> 0.9981 </td>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean F1 Score </td>
+          <td class="performancetable"> 0.8845 </td>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean False Positive Rate </td>
+          <td class="performancetable"> 0.001 </td>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean Precision </td>
+          <td class="performancetable"> 0.9026 </td>
+        </tr>
+        <tr>
+          <td class="performancetable"> Mean Recall </td>
+          <td class="performancetable"> 0.8812 </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  <br>  <br>
+  <div class="titlecard">
+        <p class="titletext"> Evaluation Metrics Across Species </p> </div>
+  <div class = "card">
+    <br> 
+    <label for="metricdropdown"> Select a metric to graph: </label>
+      <select onclick = "showAllSpeciesMetricGraph()" id = "metricdropdown" class = "dropbtn" 
+        class = "dropdown-content"> 
+        <option> average precision </option>
+        <option> area under ROC curve </option>
+        <option> f1 score </option>
+        <option> false positive rate </option>
+     </select>
+      <br> <br>
+      <div id = "allspeciesmetricgraph">
+      <!-- This is where the species metric graph is inserted with plotly -->
+      </div>
+  </div>
+  <div class = "container"> 
+    <div class="sidebysidetitlecard">
+        <p class="titletext"> Confusion Matrix for Specific Species </p> </div>
+    <div class="sidebysidetitlecard">
+      <p class="titletext"> Precision-Recall Curve Across Species </p> </div>
+  </div>
+  
+  <div class = "container"> 
+    <div class = "sidebysidecurve">
+      <br>
+      <label> Select a species: </label>
+      <select onclick = "showSpeciesDropdown()" class = "dropbtn" id = "SpeciesDropdown"> 
+      <div class = "dropdown-content">
+        <option> Amazona autumnalis </option>
+      </div>
+      </select>
+      <br> <br>
+      <div id = "confusionmatrix">
+        <!-- This is where the confusion matrix is inserted with plotly -->
+      </div>
+    </div>
+    <div class = "sidebysidecurve">
+      <div id = "precisionrecallcurve">
+      <!-- This is where the species metric graph is inserted with plotly -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Rainforest Connection CNN Visualization Dashboard </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="data/favicon.png">
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <script src = "index.js"> </script>
   <h1 class="webmaintext"> Rainforest Connection CNN Report </h1>
   <div class='titlecard'>
     <p class='titletext'> Training Data </p>
