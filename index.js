@@ -392,27 +392,31 @@ function makeTrainingDataChart(jsonfile) {
   var totaldata = {};
   specieslist.forEach((key, i) => totaldata[key] = totallist[i]);
   console.log(totaldata);
-  
+
+
   var trace1 = {
     x: specieslist,
     y: absencedata,
-    //name: 'LA Zoo',
     type: 'bar',
     name: 'Absence',
     hovertemplate:
             "Species: %{x}<br>" +
             "Absence Data: %{y}<br>" +
-            "Total Data: %{totaldata[x]}<br>" +
             "<extra></extra>"
   };
   var trace2 = {
     x: specieslist,
     y: presencedata,
-    //name: 'SF Zoo',
     type: 'bar',
-    name: 'Presence'
+    name: 'Presence',
+    hovertemplate:
+            "Species: %{x}<br>" +
+            "Absence Data: %{y}<br>" +
+            "<extra></extra>"
   };
   var data = [trace1, trace2];
+
+  
   var layout = {
     barmode: 'stack',
     title: 'Training Data Used for Each Species, Separated by Presence/Absence Data',
